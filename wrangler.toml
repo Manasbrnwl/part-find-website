@@ -1,0 +1,9 @@
+name = "partfind-frontend"
+compatibility_date = "2024-03-01"
+pages_build_output_dir = "dist"
+
+[vars]
+# Add any necessary environment variables here
+
+# [env.production]
+# Add production-specific configurations here
