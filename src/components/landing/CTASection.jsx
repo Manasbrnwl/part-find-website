@@ -41,7 +41,7 @@ export const CTASection = ({ content }) => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4"
         >
-          <a href={data.primaryCTA?.href || "#"} target="_blank" rel="noopener noreferrer">
+          <a href={data.primaryCTA?.href || "https://play.google.com/store/apps/details?id=com.event.partfind"} target="_blank" rel="noopener noreferrer">
             <Button
               className="bg-[#CCFF00] text-black hover:bg-[#b8e600] h-14 px-10 rounded-none border-2 border-[#CCFF00] font-bold text-base tracking-wider uppercase active:translate-y-1 transition-transform duration-100"
               data-testid="cta-primary"
@@ -50,7 +50,7 @@ export const CTASection = ({ content }) => {
               {data.primaryCTA?.label || "Join Partfind Today"}
             </Button>
           </a>
-          <a href={data.secondaryCTA?.href || "#"} target="_blank" rel="noopener noreferrer">
+          <a href={data.secondaryCTA?.href || "https://play.google.com/store/apps/details?id=com.event.partfind"} target="_blank" rel="noopener noreferrer">
             <Button
               variant="outline"
               className="h-14 px-10 rounded-none border-2 border-zinc-500 text-zinc-300 hover:bg-zinc-800 hover:text-white font-bold text-base tracking-wider uppercase active:translate-y-1 transition-transform duration-100"

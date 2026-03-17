@@ -55,15 +55,7 @@ export const WhyPartfind = ({ content }) => {
           })}
         </div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="mt-12 font-syne text-xl font-bold text-center"
-        >
-          Trust = Growth.
-        </motion.p>
+
       </div>
     </section>
   );

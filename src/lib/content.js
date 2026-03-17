@@ -30,7 +30,7 @@ export const defaultContent = {
             "Organizers facing last-minute no-shows",
             "Too many groups, zero organization"
         ],
-        conclusion: "Partfind is fixing this."
+        conclusion: "The event industry is unorganized. Partfind is fixing this."
     },
     whatIs: {
         headline: "A Smarter Way to Find Event Work",
@@ -84,10 +84,12 @@ export const defaultContent = {
     whyPartfind: {
         headline: "Built on Trust",
         badges: [
-            { title: "Verified Profiles", desc: "Every student and organizer is verified." },
-            { title: "Location Based", desc: "Jobs relevant to your area." },
-            { title: "Transparent Descriptions", desc: "Clear pay, hours, and expectations." },
-            { title: "Fair Selection", desc: "Equal opportunity for everyone." }
+            { title: "Verified Profiles", desc: "Every student and organizer is verified" },
+            { title: "Organizer Verification", desc: "We vet all event organizers" },
+            { title: "Location Based Feed", desc: "Jobs relevant to your area" },
+            { title: "Transparent Descriptions", desc: "Clear pay, hours, and expectations" },
+            { title: "Fair Selection", desc: "Equal opportunity for everyone" },
+            { title: "Reduced No-Shows", desc: "Accountability built into the system" }
         ]
     },
     benefits: {
@@ -135,8 +137,8 @@ export const defaultContent = {
     cta: {
         title: "STOP SEARCHING. START FINDING.",
         subtitle: "Your next opportunity is one click away.",
-        primaryBtn: { label: "JOIN PARTFIND TODAY", href: "#" },
-        secondaryBtn: { label: "POST YOUR REQUIREMENT", href: "#" }
+        primaryBtn: { label: "JOIN PARTFIND TODAY", href: "https://play.google.com/store/apps/details?id=com.event.partfind" },
+        secondaryBtn: { label: "POST YOUR REQUIREMENT", href: "https://play.google.com/store/apps/details?id=com.event.partfind" }
     },
     footer: {
         text: "PARTFIND - Connecting students with real event opportunities.",
@@ -148,15 +150,15 @@ export const defaultContent = {
             { label: "Terms & Conditions", href: "#" }
         ],
         socials: {
-            instagram: "#",
+            instagram: "https://www.instagram.com/part_find?igsh=MWQ3NWJ5NHBjYmVvaA%3D%3D",
             linkedin: "#"
         },
-        email: "contact@partfind.in"
+        email: "partfindofficial@gmail.com"
     }
 };
 
 export const getContent = () => {
-    const content = localStorage.getItem("landing_content_v2");
+    const content = localStorage.getItem("landing_content_v3");
     if (content && content !== "undefined") {
         try {
             const parsed = JSON.parse(content);
@@ -169,10 +171,10 @@ export const getContent = () => {
 };
 
 export const saveContent = (content) => {
-    localStorage.setItem("landing_content_v2", JSON.stringify(content));
+    localStorage.setItem("landing_content_v3", JSON.stringify(content));
 };
 
 export const resetContent = () => {
-    localStorage.removeItem("landing_content_v2");
+    localStorage.removeItem("landing_content_v3");
     return defaultContent;
 };
