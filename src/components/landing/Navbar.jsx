@@ -45,19 +45,7 @@ export const Navbar = ({ content }) => {
             {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
 
-          {location.pathname !== "/edit" && (
-            <Link to="/edit">
-              <Button
-                variant="outline"
-                className="hidden md:inline-flex rounded-none border-2 font-mono text-xs tracking-wider uppercase"
-                data-testid="edit-link"
-              >
-                /edit
-              </Button>
-            </Link>
-          )}
-
-          {location.pathname === "/edit" && (
+          {location.pathname === "/edit-cards-content" && (
             <Link to="/">
               <Button
                 variant="outline"
@@ -103,11 +91,13 @@ export const Navbar = ({ content }) => {
             </a>
           ))}
           <div className="flex gap-3 pt-4">
-            <Link to={location.pathname === "/edit" ? "/" : "/edit"} onClick={() => setMobileOpen(false)}>
-              <Button variant="outline" className="rounded-none border-2 font-mono text-xs uppercase">
-                {location.pathname === "/edit" ? "/home" : "/edit"}
-              </Button>
-            </Link>
+            {location.pathname === "/edit-cards-content" && (
+              <Link to="/" onClick={() => setMobileOpen(false)}>
+                <Button variant="outline" className="rounded-none border-2 font-mono text-xs uppercase">
+                  /home
+                </Button>
+              </Link>
+            )}
             <a href={data.cta?.href || "#"} target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#CCFF00] text-black hover:bg-[#b8e600] rounded-none border-2 border-black font-bold text-xs uppercase">
                 {data.cta?.label || "JOIN NOW"}

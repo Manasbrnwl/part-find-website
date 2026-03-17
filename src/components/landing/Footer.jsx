@@ -53,7 +53,7 @@ export const Footer = ({ content }) => {
                   <Instagram className="h-4 w-4" />
                 </a>
               )}
-              {data.socials?.linkedin && (
+              {/* {data.socials?.linkedin && (
                 <a
                   href={data.socials.linkedin}
                   target="_blank"
@@ -63,7 +63,7 @@ export const Footer = ({ content }) => {
                 >
                   <Linkedin className="h-4 w-4" />
                 </a>
-              )}
+              )} */}
               {data.email && (
                 <a
                   href={`mailto:${data.email}`}
@@ -83,9 +83,9 @@ export const Footer = ({ content }) => {
         <Separator className="my-8" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-mono text-xs text-muted-foreground" data-testid="footer-copyright">
+          {/* <p className="font-mono text-xs text-muted-foreground" data-testid="footer-copyright">
             &copy; {new Date().getFullYear()} Partfind. All rights reserved.
-          </p>
+          </p> */}
           <p className="font-mono text-xs text-muted-foreground">
             @partfind
           </p>

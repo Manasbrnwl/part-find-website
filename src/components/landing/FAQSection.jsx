@@ -9,7 +9,7 @@ import {
 
 export const FAQSection = ({ content }) => {
     const data = content?.faq || {};
-    const items = data.items || [];
+    const items = data.questions || data.items || [];
 
     return (
         <section id="faq" className="py-24 md:py-32" data-testid="faq-section">
@@ -21,14 +21,12 @@ export const FAQSection = ({ content }) => {
                     transition={{ duration: 0.5 }}
                     className="mb-16"
                 >
-                    <span className="inline-block bg-[#CCFF00] text-black px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider mb-4">
-                        FAQ
-                    </span>
+
                     <h2
                         className="font-syne text-4xl md:text-6xl font-bold tracking-tight uppercase"
                         data-testid="faq-headline"
                     >
-                        {data.headline || "Frequently Asked Questions"}
+                        {data.title || data.headline || "Frequently Asked Questions"}
                     </h2>
                 </motion.div>
 

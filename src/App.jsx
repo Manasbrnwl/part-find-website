@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/edit" element={<EditPage />} />
+          <Route path="/edit-cards-content" element={<EditPage />} />
         </Routes>
       </BrowserRouter>
       <Toaster position="bottom-right" />
