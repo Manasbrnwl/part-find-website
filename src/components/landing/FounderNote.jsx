@@ -22,7 +22,7 @@ export const FounderNote = ({ content }) => {
             className="font-syne text-3xl md:text-5xl font-bold tracking-tight uppercase mb-12"
             data-testid="founder-headline"
           >
-            {data.headline || "Why We Built Partfind"}
+            {data.headline || "Why We Built Part-find"}
           </h2>
         </motion.div>
 
@@ -49,10 +49,10 @@ export const FounderNote = ({ content }) => {
                 </div>
                 <div>
                   <div className="font-syne font-bold" data-testid="founder-attribution">
-                    {data.attribution || "Co-Founder, Partfind"}
+                    {data.attribution || "Co-Founder, Part-find"}
                   </div>
                   <div className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
-                    Partfind Team
+                    Part-find Team
                   </div>
                 </div>
               </div>

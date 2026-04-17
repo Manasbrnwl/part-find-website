@@ -11,7 +11,7 @@ export const Footer = ({ content }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <div className="font-syne font-extrabold text-2xl tracking-tighter uppercase mb-3" data-testid="footer-brand">
-              {data.brand || "PARTFIND"}
+              {data.brand || "Part-find"}
             </div>
             <p className="font-outfit text-sm text-muted-foreground max-w-xs">
               {data.tagline || "Connecting students with real event opportunities."}
@@ -84,10 +84,10 @@ export const Footer = ({ content }) => {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* <p className="font-mono text-xs text-muted-foreground" data-testid="footer-copyright">
-            &copy; {new Date().getFullYear()} Partfind. All rights reserved.
+            &copy; {new Date().getFullYear()} Part-find. All rights reserved.
           </p> */}
           <p className="font-mono text-xs text-muted-foreground">
-            @partfind
+            @part-find
           </p>
         </div>
       </div>

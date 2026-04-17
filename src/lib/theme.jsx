@@ -5,7 +5,7 @@ const ThemeContext = createContext({ theme: "dark", toggleTheme: () => { } });
 export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState(() => {
         if (typeof window !== "undefined") {
-            return localStorage.getItem("partfind_theme") || "dark";
+            return localStorage.getItem("part-find_theme") || "dark";
         }
         return "dark";
     });
@@ -14,7 +14,7 @@ export const ThemeProvider = ({ children }) => {
         const root = window.document.documentElement;
         root.classList.remove("light", "dark");
         root.classList.add(theme);
-        localStorage.setItem("partfind_theme", theme);
+        localStorage.setItem("part-find_theme", theme);
     }, [theme]);
 
     const toggleTheme = () => {

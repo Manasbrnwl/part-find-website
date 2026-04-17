@@ -20,7 +20,7 @@ export const WhatIsSection = ({ content }) => {
           className="mb-16"
         >
           <span className="inline-block bg-[#CCFF00] text-black px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider mb-4">
-            What is Partfind?
+            What is Part-find?
           </span>
           <h2
             className="font-syne text-4xl md:text-6xl font-bold tracking-tight uppercase"
@@ -29,7 +29,7 @@ export const WhatIsSection = ({ content }) => {
             {data.headline || "A Smarter Way to Find Event Work"}
           </h2>
           <p className="font-outfit text-base md:text-lg text-muted-foreground mt-4 max-w-xl">
-            {data.description || "Partfind connects students and organizers."}
+            {data.description || "Part-find connects students and organizers."}
           </p>
         </motion.div>
 

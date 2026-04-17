@@ -11,15 +11,15 @@ const SECTION_LABELS = {
   navbar: "Navbar",
   hero: "Hero Section",
   problem: "Problem Statement",
-  whatIs: "What is Partfind",
+  whatIs: "What is Part-find",
   howItWorks: "How It Works",
   opportunities: "Opportunities",
-  whyPartfind: "Why Partfind",
-  benefits: "Benefits",
-  founderNote: "Founder Note",
-  faq: "FAQ",
-  cta: "Final CTA",
-  footer: "Footer",
+  whyPart- find: "Why Part-find",
+    benefits: "Benefits",
+      founderNote: "Founder Note",
+        faq: "FAQ",
+          cta: "Final CTA",
+            footer: "Footer",
 };
 
 export default function EditPage() {
@@ -122,8 +122,8 @@ export default function EditPage() {
                       key={key}
                       onClick={() => handleSectionChange(key)}
                       className={`w-full text-left px-3 py-2.5 font-outfit text-sm transition-colors duration-200 ${activeSection === key
-                          ? "bg-blue-600 dark:bg-blue-500 text-white"
-                          : "hover:bg-muted"
+                        ? "bg-blue-600 dark:bg-blue-500 text-white"
+                        : "hover:bg-muted"
                         }`}
                       data-testid={`section-btn-${key}`}
                     >

@@ -61,7 +61,7 @@ export const ProblemSection = ({ content }) => {
             >
               <span className="font-mono text-sm text-green-400">
                 <span className="text-green-700">$</span>{" "}
-                {data.conclusion || "The event industry is unorganized. Partfind is fixing this."}
+                {data.conclusion || "The event industry is unorganized. Part-find is fixing this."}
                 <span className="animate-pulse">_</span>
               </span>
             </motion.div>

@@ -1,6 +1,6 @@
 export const defaultContent = {
     navbar: {
-        brand: "PARTFIND",
+        brand: "Part-find",
         links: [
             { label: "HOW IT WORKS", href: "#how-it-works" },
             { label: "OPPORTUNITIES", href: "#opportunities" },
@@ -30,11 +30,11 @@ export const defaultContent = {
             "Organizers facing last-minute no-shows",
             "Too many groups, zero organization"
         ],
-        conclusion: "The event industry is unorganized. Partfind is fixing this."
+        conclusion: "The event industry is unorganized. Part-find is fixing this."
     },
     whatIs: {
         headline: "A Smarter Way to Find Event Work",
-        description: "Partfind connects students and organizers in one place.",
+        description: "Part-find connects students and organizers in one place.",
         tagline: "Everything in one place.",
         cards: [
             {
@@ -104,16 +104,16 @@ export const defaultContent = {
         }
     },
     founderNote: {
-        quote: "As students ourselves, we saw how unorganized the event industry is. Endless WhatsApp groups. No clarity. No trust. Partfind was built to bring structure, transparency, and real opportunities to students across colleges.",
-        name: "PARTFIND TEAM",
-        role: "Co-Founder, Partfind"
+        quote: "As students ourselves, we saw how unorganized the event industry is. Endless WhatsApp groups. No clarity. No trust. Part-find was built to bring structure, transparency, and real opportunities to students across colleges.",
+        name: "Part-find TEAM",
+        role: "Co-Founder, Part-find"
     },
     faq: {
         title: "Frequently Asked Questions",
-        subtitle: "Everything you need to know about Partfind",
+        subtitle: "Everything you need to know about Part-find",
         questions: [
             {
-                question: "Is Partfind free for students?",
+                question: "Is Part-find free for students?",
                 answer: "Yes, creating a profile and applying is completely free."
             },
             {
@@ -137,12 +137,12 @@ export const defaultContent = {
     cta: {
         title: "STOP SEARCHING. START FINDING.",
         subtitle: "Your next opportunity is one click away.",
-        primaryBtn: { label: "JOIN PARTFIND TODAY", href: "https://play.google.com/store/apps/details?id=com.event.partfind" },
-        secondaryBtn: { label: "POST YOUR REQUIREMENT", href: "https://play.google.com/store/apps/details?id=com.event.partfind" }
+        primaryBtn: { label: "JOIN Part-find TODAY", href: "https://play.google.com/store/apps/details?id=com.event.part-find" },
+        secondaryBtn: { label: "POST YOUR REQUIREMENT", href: "https://play.google.com/store/apps/details?id=com.event.part-find" }
     },
     footer: {
-        text: "PARTFIND - Connecting students with real event opportunities.",
-        copyright: "© 2026 Partfind. All rights reserved. @partfind",
+        text: "Part-find - Connecting students with real event opportunities.",
+        copyright: "© 2026 Part-find. All rights reserved. @part-find",
         links: [
             { label: "About Us", href: "#" },
             { label: "Contact", href: "#" },
@@ -153,7 +153,7 @@ export const defaultContent = {
             instagram: "https://www.instagram.com/part_find?igsh=MWQ3NWJ5NHBjYmVvaA%3D%3D",
             linkedin: "#"
         },
-        email: "partfindofficial@gmail.com"
+        email: "offical@part-find.org"
     }
 };
 

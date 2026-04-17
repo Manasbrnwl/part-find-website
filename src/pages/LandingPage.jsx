@@ -35,7 +35,7 @@ export default function LandingPage() {
       <BenefitsSection content={content} />
       <FounderNote content={content} />
       <FAQSection content={content} />
-      <CTASection content={content} />
+      <CTASection content={content} />  
       <Footer content={content} />
     </div>
   );

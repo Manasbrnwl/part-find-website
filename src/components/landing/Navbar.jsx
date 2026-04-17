@@ -18,7 +18,7 @@ export const Navbar = ({ content }) => {
     >
       <div className="container mx-auto px-4 md:px-6 max-w-7xl flex items-center justify-between h-16">
         <Link to="/" className="font-syne font-extrabold text-2xl tracking-tighter uppercase" data-testid="navbar-brand">
-          {data.brand || "PARTFIND"}
+          {data.brand || "Part-find"}
         </Link>
 
         <div className="hidden md:flex items-center gap-8">

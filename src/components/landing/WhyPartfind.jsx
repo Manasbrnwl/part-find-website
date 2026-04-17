@@ -4,15 +4,15 @@ import { ShieldCheck, MapPin, Eye, Scale, UserCheck, Clock } from "lucide-react"
 
 const trustIcons = [ShieldCheck, UserCheck, MapPin, Eye, Scale, Clock];
 
-export const WhyPartfind = ({ content }) => {
-  const data = content?.whyPartfind || {};
+export const WhyPart-find = ({ content }) => {
+  const data = content?.whyPart - find || {};
   const badges = data.badges || [];
 
   return (
     <section
       id="why-us"
       className="py-24 md:py-32 bg-muted/50"
-      data-testid="whypartfind-section"
+      data-testid="whypart-find-section"
     >
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <motion.div
@@ -27,7 +27,7 @@ export const WhyPartfind = ({ content }) => {
           </span>
           <h2
             className="font-syne text-4xl md:text-6xl font-bold tracking-tight uppercase"
-            data-testid="whypartfind-headline"
+            data-testid="whypart-find-headline"
           >
             {data.headline || "Built on Trust"}
           </h2>
