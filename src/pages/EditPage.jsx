@@ -14,7 +14,7 @@ const SECTION_LABELS = {
   whatIs: "What is Part-find",
   howItWorks: "How It Works",
   opportunities: "Opportunities",
-  whyPart- find: "Why Part-find",
+  whyPartfind: "Why Part-find",
     benefits: "Benefits",
       founderNote: "Founder Note",
         faq: "FAQ",

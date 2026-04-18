@@ -4,16 +4,16 @@ export const defaultContent = {
         links: [
             { label: "HOW IT WORKS", href: "#how-it-works" },
             { label: "OPPORTUNITIES", href: "#opportunities" },
-            { label: "WHY US", href: "#why-us" },
+            { label: "BLOGS", href: "#blogs" },
             { label: "FAQ", href: "#faq" }
         ],
-        cta: { label: "JOIN EARLY ACCESS", href: "#" }
+        cta: { label: "GET THE APP", href: "https://play.google.com/store/apps/details?id=com.event.part-find" }
     },
     hero: {
         headline: "FIND TRUSTED EVENT GIGS & VOLUNTEERING OPPORTUNITIES",
         subheadline: "No more messy WhatsApp groups. Discover verified opportunities, apply in one click, and gain real-world exposure.",
-        primaryCTA: { label: "JOIN AS STUDENT", href: "#" },
-        secondaryCTA: { label: "POST REQUIREMENT", href: "#" },
+        primaryCTA: { label: "DOWNLOAD ON PLAY STORE", href: "https://play.google.com/store/apps/details?id=com.event.part-find" },
+        secondaryCTA: { label: "POST REQUIREMENT", href: "#contact" },
         floatingCards: [
             { title: "Stage Setup", pay: "₹500/day", location: "Bangalore" },
             { title: "Event Promoters", pay: "₹800/day", location: "Mumbai" },
@@ -130,9 +130,40 @@ export const defaultContent = {
             },
             {
                 question: "When is the app launching?",
-                answer: "We are currently in early access. Join now!"
+                answer: "The app is already live! You can download it now from the Google Play Store."
             }
         ]
+    },
+    blogs: {
+        headline: "Event Insights & Tips",
+        subtitle: "Stay updated with the latest in the event industry.",
+        items: [
+            {
+                title: "How to Ace Your First Event Gig",
+                excerpt: "Tips on professionalism, networking, and making a great first impression.",
+                date: "Oct 24, 2025",
+                image: "https://images.unsplash.com/photo-1540575861501-7c00117feda?q=80&w=2070&auto=format&fit=crop"
+            },
+            {
+                title: "The Future of Event Management",
+                excerpt: "Why digital platforms like Part-find are replacing traditional WhatsApp groups.",
+                date: "Nov 02, 2025",
+                image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=2070&auto=format&fit=crop"
+            },
+            {
+                title: "Why Students Should Work in Events",
+                excerpt: "Building soft skills and confidence through on-ground event exposure.",
+                date: "Nov 15, 2025",
+                image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2070&auto=format&fit=crop"
+            }
+        ]
+    },
+    enquiry: {
+        headline: "Business Enquiries",
+        subtitle: "Looking for reliable event staff? Let's talk.",
+        email: "official@part-find.org",
+        phone: "+91 9110056157",
+        address: "Mumbai, India"
     },
     cta: {
         title: "STOP SEARCHING. START FINDING.",
@@ -153,7 +184,7 @@ export const defaultContent = {
             instagram: "https://www.instagram.com/part_find?igsh=MWQ3NWJ5NHBjYmVvaA%3D%3D",
             linkedin: "#"
         },
-        email: "offical@part-find.org"
+        email: "official@part-find.org"
     }
 };
 

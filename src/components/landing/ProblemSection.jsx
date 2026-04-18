@@ -1,96 +1,71 @@
-
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { XCircle } from "lucide-react";
+import { AlertCircle } from "lucide-react";
 
 export const ProblemSection = ({ content }) => {
   const data = content?.problem || {};
   const issues = data.issues || [];
 
   return (
-    <section
-      className="relative bg-zinc-950 text-green-400 py-24 md:py-32 overflow-hidden"
-      data-testid="problem-section"
-    >
-      <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#00ff0012_1px,transparent_1px),linear-gradient(to_bottom,#00ff0012_1px,transparent_1px)] bg-[size:20px_20px]" />
+    <section className="relative py-24 md:py-32 overflow-hidden bg-zinc-950 text-white">
+      {/* Background Atmosphere: Event crowd silhouette / bokeh */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <img 
+          src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop" 
+          className="w-full h-full object-cover grayscale brightness-50"
+          alt="Event background"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-950/80 to-zinc-950" />
+      </div>
 
-      <div className="container mx-auto px-4 md:px-6 max-w-4xl relative z-10">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="font-mono text-xs uppercase tracking-wider text-green-600 mb-4">
-            // ERROR_LOG.txt
-          </div>
-
-          <div className="border-2 border-green-800 bg-black/50 p-6 md:p-10">
-            <div className="flex items-center gap-2 mb-6 pb-4 border-b border-green-900">
-              <div className="w-3 h-3 rounded-full bg-red-500" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500" />
-              <div className="w-3 h-3 rounded-full bg-green-500" />
-              <span className="font-mono text-xs text-green-700 ml-3">
-                student@reality:~$
-              </span>
-            </div>
-
-            <h2
-              className="font-syne text-3xl md:text-5xl font-bold tracking-tight text-green-300 mb-4"
-              data-testid="problem-headline"
-            >
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="inline-block border border-[#CCFF00] text-[#CCFF00] px-3 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider mb-6">
+              Industry Challenge
+            </span>
+            <h2 className="font-syne text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter uppercase mb-6 leading-[0.9]">
               {data.headline || "Still searching in WhatsApp groups?"}
             </h2>
-
-            <p className="font-mono text-sm text-green-600 mb-8">
-              {data.subtext || "We know how chaotic it is."}
+            <p className="font-outfit text-lg md:text-xl text-zinc-400 mb-8 max-w-md leading-relaxed">
+              {data.subtext || "We know how chaotic it is. The event industry deserves better organization and trust."}
             </p>
-
-            <div className="space-y-3">
-              {issues.map((issue, i) => (
-                <TerminalLine key={i} text={issue} delay={i * 0.15} index={i} />
-              ))}
+            
+            <div className="relative p-8 border-2 border-zinc-800 bg-zinc-900/50 backdrop-blur-sm shadow-[8px_8px_0px_0px_rgba(204,255,0,0.1)]">
+              <div className="absolute -top-4 -left-4 w-12 h-12 bg-[#CCFF00] flex items-center justify-center rotate-3 border-2 border-black">
+                <AlertCircle className="text-black h-6 w-6 -rotate-3" />
+              </div>
+              <p className="font-syne font-bold text-xl lg:text-2xl text-white italic leading-tight">
+                "{data.conclusion || "The event industry is unorganized. Part-find is fixing this."}"
+              </p>
             </div>
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: issues.length * 0.15 + 0.3 }}
-              className="mt-8 pt-6 border-t border-green-900"
-            >
-              <span className="font-mono text-sm text-green-400">
-                <span className="text-green-700">$</span>{" "}
-                {data.conclusion || "The event industry is unorganized. Part-find is fixing this."}
-                <span className="animate-pulse">_</span>
-              </span>
-            </motion.div>
+          <div className="space-y-4">
+            {issues.map((issue, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="flex items-center gap-6 p-6 md:p-8 border border-zinc-800 bg-zinc-900/30 backdrop-blur-sm group hover:border-[#CCFF00] transition-all duration-300"
+              >
+                <div className="font-mono text-3xl md:text-4xl font-black text-zinc-800 group-hover:text-[#CCFF00] transition-colors leading-none">
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+                <div className="font-syne font-bold text-lg md:text-xl uppercase tracking-tight text-zinc-300 group-hover:text-white transition-colors">
+                  {issue}
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
-};
-
-const TerminalLine = ({ text, delay, index }) => {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), delay * 1000 + 500);
-    return () => clearTimeout(timer);
-  }, [delay]);
-
-  if (!visible) return null;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: -10 }}
-      animate={{ opacity: 1, x: 0 }}
-      className="flex items-start gap-3 font-mono text-sm"
-      data-testid={`problem-issue-${index}`}
-    >
-      <XCircle className="h-4 w-4 text-red-500 mt-0.5 shrink-0" />
-      <span className="text-green-300">{text}</span>
-    </motion.div>
-  );
-};
+};

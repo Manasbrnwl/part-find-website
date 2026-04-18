@@ -4,17 +4,19 @@ import { ShieldCheck, MapPin, Eye, Scale, UserCheck, Clock } from "lucide-react"
 
 const trustIcons = [ShieldCheck, UserCheck, MapPin, Eye, Scale, Clock];
 
-export const WhyPart-find = ({ content }) => {
-  const data = content?.whyPart - find || {};
+export const WhyPartfind = ({ content }) => {
+  const data = content?.whyPartfind || {};
   const badges = data.badges || [];
 
   return (
     <section
       id="why-us"
-      className="py-24 md:py-32 bg-muted/50"
+      className="py-24 md:py-32 bg-muted/50 relative overflow-hidden"
       data-testid="whypart-find-section"
     >
-      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-blue-500/5 to-transparent pointer-events-none" />
+      
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,16 +49,14 @@ export const WhyPart-find = ({ content }) => {
                 data-testid={`trust-badge-${i}`}
               >
                 <div className="absolute top-0 right-0 w-16 h-16 bg-[#CCFF00]/10 group-hover:bg-[#CCFF00]/20 transition-colors duration-300" />
-                <Icon className="h-8 w-8 mb-4 text-blue-600 dark:text-blue-400" />
-                <h3 className="font-syne text-lg font-bold mb-2">{badge.title}</h3>
-                <p className="font-outfit text-sm text-muted-foreground">{badge.desc}</p>
+                <Icon className="h-8 w-8 mb-4 text-[#CCFF00] drop-shadow-[0_0_8px_rgba(204,255,0,0.3)]" />
+                <h3 className="font-syne text-lg font-bold mb-2 uppercase tracking-tight">{badge.title}</h3>
+                <p className="font-outfit text-sm text-muted-foreground leading-relaxed">{badge.desc}</p>
               </motion.div>
             );
           })}
         </div>
-
-
       </div>
     </section>
   );
-};
+};

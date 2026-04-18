@@ -34,11 +34,8 @@ export const HeroSection = ({ content }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <span className="inline-block bg-[#CCFF00] text-black px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider mb-6">
-              Early Access Open
-            </span>
             <h1
-              className="font-syne text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter leading-none uppercase"
+              className="font-syne text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tighter leading-none uppercase pt-6"
               data-testid="hero-headline"
             >
               {data.headline || "Find Trusted Event Gigs"}
